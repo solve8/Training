@@ -8,49 +8,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Hola Caracola'),
+          title: const Text('Insta'),
         ),
         body: const Post(),
-        floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.add),
-          onPressed: () {
-            print('pressed!');
-          },
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home_rounded),
-              label: 'Feed',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.search_outlined),
-              label: 'Buscar',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Perfil',
-            ),
-          ],
-        ),
-        drawer: Drawer(
-          child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(children: [
-                const Text(
-                  'Hola',
-                  style: TextStyle(fontSize: 60),
-                ),
-                ElevatedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: const Text('Volver'))
-              ]),
-            ),
-          ),
-        ),
       ),
     );
   }
@@ -70,17 +30,13 @@ class Post extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                children: [
-                  ClipOval(
-                    child: Image.network(
-                      'https://www.pmonti.com/wp-content/uploads/2021/02/sliced-potatoes-put-around-potato-sack-gray-floor.jpg',
-                      width: 40,
-                      height: 40,
-                      fit: BoxFit.cover, //Que ocupe todo
-                    ),
+                children: const [
+                  CircleAvatar(
+                    backgroundImage: AssetImage('assets/Hard Work.jpeg'),
+                    radius: 20,
                   ),
-                  const SizedBox(width: 13),
-                  const Text(
+                  SizedBox(width: 13),
+                  Text(
                     'josse_luiss6',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
@@ -91,8 +47,7 @@ class Post extends StatelessWidget {
           ),
         ),
         // POST
-        Image.network(
-            'https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/09/instagram-tiktok-2484431.jpg'),
+        const Image(image: AssetImage('assets/Hard Work.jpeg')),
         // ABAJO
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -124,22 +79,18 @@ class Post extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               Row(
-                children: [
-                  ClipOval(
-                    child: Image.network(
-                      'https://www.pmonti.com/wp-content/uploads/2021/02/sliced-potatoes-put-around-potato-sack-gray-floor.jpg',
-                      width: 20,
-                      height: 20,
-                      fit: BoxFit.cover, //Que ocupe todo
-                    ),
+                children: const [
+                  CircleAvatar(
+                    backgroundImage: AssetImage('assets/Hard Work.jpeg'),
+                    radius: 10,
                   ),
-                  const SizedBox(width: 5),
-                  const Text(
+                  SizedBox(width: 5),
+                  Text(
                     'josse_luiss6',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(width: 5),
-                  const Text('Diseño de instagram para aprender'),
+                  SizedBox(width: 5),
+                  Text('Diseño de instagram para aprender'),
                 ],
               ),
               const SizedBox(height: 10),

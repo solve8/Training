@@ -59,7 +59,7 @@ class QuoteCard extends StatelessWidget {
   // MAKING THE PROPIERTY
   // 1. ~ We difine the quote element
   final Quote quote;
-  const QuoteCard({required this.quote});
+  const QuoteCard({Key? key, required this.quote}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

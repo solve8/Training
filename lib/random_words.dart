@@ -9,16 +9,7 @@ class HomePage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Startup Name Generator'),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.restore_page),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-          backgroundColor: Colors.orange,
+          title: const Text('Palabras random'),
         ),
         body: const Center(child: RandomWords()),
       ),
