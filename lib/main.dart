@@ -3,6 +3,7 @@ import 'package:training/home.dart';
 import 'package:training/training.dart';
 import 'random_words.dart';
 import 'home.dart';
+import 'counter_screen.dart';
 
 void main() {
   runApp(const Canvas());
@@ -17,12 +18,7 @@ class Canvas extends StatefulWidget {
 
 class _CanvasState extends State<Canvas> {
   int selectedPage = 0;
-  List<Widget> pages = const [
-    MyApp(),
-    HomePage(),
-    Home(),
-    Center(child: Text('Perfil'))
-  ];
+  List<Widget> pages = const [MyApp(), HomePage(), Home(), CounterScreen()];
   void selectedNav(int index) {
     setState(() {
       selectedPage = index;
@@ -43,8 +39,8 @@ class _CanvasState extends State<Canvas> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.person_outline), label: "Perfil")
           ],
-          selectedItemColor: Colors.orange,
-          unselectedItemColor: Colors.black,
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.grey,
           currentIndex: selectedPage,
           onTap: selectedNav,
           showSelectedLabels: false,

@@ -7,9 +7,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Insta'),
-        ),
+        appBar: AppBar(title: const Text('Insta'), centerTitle: true),
         body: const Post(),
       ),
     );

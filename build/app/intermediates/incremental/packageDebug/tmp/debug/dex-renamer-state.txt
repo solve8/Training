@@ -1,4 +1,4 @@
-#Wed Jun 29 16:13:21 CEST 2022
+#Thu Jun 30 09:22:40 CEST 2022
 base.0=/Users/dori/AndroidStudioProjects/Training/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

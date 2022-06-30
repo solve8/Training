@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
                   '$caca',
                   style: const TextStyle(fontSize: 20),
                 ),
-                const SizedBox(height: 5),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

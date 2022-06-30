@@ -8,9 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Palabras random'),
-        ),
+        appBar: AppBar(title: const Text('Palabras random'), centerTitle: true),
         body: const Center(child: RandomWords()),
       ),
     );
