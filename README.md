@@ -1,16 +1,11 @@
 # training
 
-A new Flutter project.
+A new Flutter project in which I will be storing my learnings.
+The objective is to have a clean app in which me and who need
+it will can base on.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Pages:
+- Something similar to an Instagram's post
+- Using the package random_words
+- Something random
+- An improved counter
