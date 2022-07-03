@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:like_button/like_button.dart';
+import 'likeButton.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -54,7 +56,7 @@ class Post extends StatelessWidget {
             children: [
               Row(
                 children: const [
-                  Icon(Icons.favorite_border_outlined, size: 30),
+                  LikeButton(),
                   SizedBox(width: 13),
                   Icon(Icons.messenger_outline_rounded, size: 30),
                   SizedBox(width: 13),

@@ -31,11 +31,12 @@ class _QuoteListState extends State<QuoteList> {
     return Column(
       children: [
         const Text(
-          'Historial',
-          style: TextStyle(fontSize: 20),
+          'Citas infinitas',
+          style: TextStyle(fontSize: 30),
         ),
+        const SizedBox(height: 5),
         ElevatedButton(
-            child: const Text('Orange'),
+            child: const Text('Añadir cita'),
             onPressed: () => setState(() => quotes.add(Quote(
                 text:
                     'El botón en teoría sobra, solo imita la segunda función que debería realizar',

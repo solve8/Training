@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:training/home.dart';
+import 'package:training/citasContadorAppbar.dart';
 import 'package:training/training.dart';
 import 'random_words.dart';
-import 'home.dart';
+import 'citasContadorAppbar.dart';
 import 'counter_screen.dart';
 
 void main() {
