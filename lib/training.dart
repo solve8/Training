@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
-import 'likeButton.dart';
+import 'like_button.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Insta extends StatelessWidget {
+  const Insta({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: const Text('Insta'), centerTitle: true),
         body: const Post(),
+        resizeToAvoidBottomInset: false,
       ),
     );
   }
@@ -42,7 +43,24 @@ class Post extends StatelessWidget {
                   ),
                 ],
               ),
-              const Icon(Icons.more_vert)
+              const PopUpMenu(menuList: [
+                PopupMenuItem(
+                    child: ListTile(
+                  leading: Icon(Icons.share),
+                  title: Text('Compartir'),
+                )),
+                PopupMenuItem(
+                    child: ListTile(
+                  leading: Icon(Icons.link),
+                  title: Text('Vincular'),
+                )),
+                PopupMenuDivider(),
+                PopupMenuItem(
+                    child: ListTile(
+                  leading: Icon(Icons.report),
+                  title: Text('Report'),
+                ))
+              ])
             ],
           ),
         ),
@@ -55,12 +73,40 @@ class Post extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                children: const [
-                  LikeButton(),
-                  SizedBox(width: 13),
-                  Icon(Icons.messenger_outline_rounded, size: 30),
-                  SizedBox(width: 13),
-                  Icon(Icons.send_sharp, size: 30)
+                children: [
+                  const LikeButton(),
+                  const SizedBox(width: 13),
+                  IconButton(
+                      onPressed: () {
+                        showBottomSheet(
+                            context: context,
+                            shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.vertical(
+                                    top: Radius.circular(25.0))),
+                            backgroundColor: Colors.yellow[200],
+                            builder: (context) => const Padding(
+                                padding: EdgeInsets.all(10),
+                                child: SizedBox(
+                                  height: 60,
+                                  child: ListTile(
+                                    title: TextField(
+                                      style: TextStyle(fontSize: 20),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    trailing: IconButton(
+                                      onPressed: null,
+                                      icon: Icon(
+                                        Icons.send,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ),
+                                )));
+                      },
+                      icon: const Icon(Icons.messenger_outline_rounded,
+                          size: 30)),
+                  const SizedBox(width: 13),
+                  const Icon(Icons.send_sharp, size: 30)
                 ],
               ),
               const Icon(Icons.label_important_outline_rounded, size: 30)
@@ -100,6 +146,20 @@ class Post extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+}
+
+class PopUpMenu extends StatelessWidget {
+  final List<PopupMenuEntry> menuList;
+  const PopUpMenu({Key? key, required this.menuList}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      itemBuilder: (context) => menuList,
+      icon: const Icon(Icons.more_vert),
     );
   }
 }
