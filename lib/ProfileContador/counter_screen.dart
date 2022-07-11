@@ -7,8 +7,6 @@ class CounterScreen extends StatefulWidget {
   State<CounterScreen> createState() => _CounterScreenState();
 }
 
-// when it's between <> means type
-
 class _CounterScreenState extends State<CounterScreen> {
   int counter = 0;
 
@@ -62,3 +60,4 @@ class _CounterScreenState extends State<CounterScreen> {
 //SizedBox is like an invisible container that we would use instead of
 //the manAxisAlignment
 //We can use => instead of {}
+// when it's between <> means type

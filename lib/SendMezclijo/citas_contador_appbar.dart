@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'quotes.dart';
+import '../SendMezclijo/quotes.dart';
 
 //import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 //flutter pub add y packages get

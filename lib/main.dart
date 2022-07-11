@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'training.dart';
-import 'random_words.dart';
-import 'citas_contador_appbar.dart';
-import 'counter_screen.dart';
+import 'Home/insta_post.dart';
+import 'SearchRandomwords/random_words.dart';
+import 'SendMezclijo/citas_contador_appbar.dart';
+import 'ProfileContador/counter_screen.dart';
 
 void main() {
   runApp(const Canvas());
@@ -41,6 +41,7 @@ class _CanvasState extends State<Canvas> {
                 icon: Icon(Icons.person_outline), label: "Perfil")
           ],
           type: BottomNavigationBarType.fixed,
+          elevation: 0,
           selectedItemColor: Colors.black,
           unselectedItemColor: Colors.grey,
           currentIndex: selectedPage,
